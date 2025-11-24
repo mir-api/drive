@@ -1,0 +1,43 @@
+-instanciamos
+
+display gravity 6
+display bg.type color
+display bg.color :&:
+display name mario
+
+define.control keyboard w,a,s,d
+define.control mouse c1,c2,c3
+
+define.obj juan :&:
+obj juan platform.gravity true
+obj juan launch.x 0
+obj juan launch.y 0
+obj juan vel.x 3
+obj juan vel.y 5
+
+define.obj piso :&:
+obj piso platform true
+obj piso launch.x 0
+obj piso launch.y -50
+
+define.sound bgmusic :&:
+sound bgmusic repeat true
+sound bgmusic launch.on.start true
+
+-funciones
+func.collide juan piso cayo
+func.destroy juan destruirJuan
+func.platform.jump juan saltarJuan
+
+@onStart
+obj juan create
+obj piso create
+sound bgmusic play
+
+@event
+event 0 run.one.time instant destruirJuan debug
+event 1 run.one.time wait.to.stop saltarJuan nodebug
+
+@loop
+if cayo event.0
+onpress keyboard w event.1
