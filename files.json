@@ -4,5 +4,6 @@
     "pruebaurl": "pruebaurl.txt",
     "artistica": "planos.png",
     "dungeon": "gamedungeon.py",
-    "saludar": "func_saludar.py"
+    "saludar": "func_saludar.py",
+    "calculadora": "func_calculadora.py"
 }
