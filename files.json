@@ -3,5 +3,6 @@
     "codigo": "script.txt",
     "pruebaurl": "pruebaurl.txt",
     "artistica": "planos.png",
-    "dungeon": "gamedungeon.py"
+    "dungeon": "gamedungeon.py",
+    "saludar": "func_saludar.py"
 }
